@@ -181,26 +181,18 @@ var showing_cursor = {
 
 var movement_human_1    = undefined;
 var movement_plant_1    = undefined;
-var group_to_approach_1_en = undefined;
-var group_to_avoid_1_en    = undefined;
 var group_to_approach_1_fr = undefined;
 var group_to_avoid_1_fr    = undefined;
 var movement_human_2    = undefined;
 var movement_plant_2    = undefined;
-var group_to_approach_2_en = undefined;
-var group_to_avoid_2_en    = undefined;
 var group_to_approach_2_fr = undefined;
 var group_to_avoid_2_fr    = undefined;
 var movement_human_3    = undefined;
 var movement_plant_3    = undefined;
-var group_to_approach_3_en = undefined;
-var group_to_avoid_3_en    = undefined;
 var group_to_approach_3_fr = undefined;
 var group_to_avoid_3_fr    = undefined;
 var movement_human_4    = undefined;
 var movement_plant_4    = undefined;
-var group_to_approach_4_en = undefined;
-var group_to_avoid_4_en    = undefined;
 var group_to_approach_4_fr = undefined;
 var group_to_avoid_4_fr    = undefined;
 
@@ -242,26 +234,18 @@ switch(vaast_first_block) {
   case "approach_human":
     movement_human_1    = "approach";
     movement_plant_1    = "avoidance";
-    group_to_approach_1_en = "persons";
-    group_to_avoid_1_en    = "plants";
     group_to_approach_1_fr = "personnes";
     group_to_avoid_1_fr    = "plantes";
     movement_human_2    = "avoidance";
     movement_plant_2    = "approach";
-    group_to_approach_2_en = "plants";
-    group_to_avoid_2_en    = "persons";
     group_to_approach_2_fr = "plantes";
     group_to_avoid_2_fr    = "personnes";
     movement_human_3    = "approach";
     movement_plant_3    = "avoidance";
-    group_to_approach_3_en = "persons";
-    group_to_avoid_3_en    = "plants";
     group_to_approach_3_fr = "personnes";
     group_to_avoid_3_fr    = "plantes";
     movement_human_4    = "avoidance";
     movement_plant_4    = "approach";
-    group_to_approach_4_en = "plants";
-    group_to_avoid_4_en    = "persons";
     group_to_approach_4_fr = "plantes";
     group_to_avoid_4_fr    = "personnes";
     break;
@@ -269,26 +253,18 @@ switch(vaast_first_block) {
   case "approach_plant":
     movement_human_1    = "avoidance";
     movement_plant_1    = "approach";
-    group_to_approach_1_en = "plants";
-    group_to_avoid_1_en    = "persons";
     group_to_approach_1_fr = "plantes";
     group_to_avoid_1_fr    = "personnes";
     movement_human_2    = "approach";
     movement_plant_2    = "avoidance";
-    group_to_approach_2_en = "persons";
-    group_to_avoid_2_en    = "plants";
     group_to_approach_2_fr = "personnes";
     group_to_avoid_2_fr    = "plantes";
     movement_human_3    = "avoidance";
     movement_plant_3    = "approach";
-    group_to_approach_3_en = "plants";
-    group_to_avoid_3_en    = "persons";
     group_to_approach_3_fr = "plantes";
     group_to_avoid_3_fr    = "personnes";
     movement_human_4    = "approach";
     movement_plant_4    = "avoidance";
-    group_to_approach_4_en = "persons";
-    group_to_avoid_4_en    = "plants";
     group_to_approach_4_fr = "personnes";
     group_to_avoid_4_fr    = "plantes";
     break;
@@ -525,27 +501,6 @@ var save_extra = {
 
 
   // initial instructions -----------------------------------------------------------------
-  var welcome_en = {
-    type: "html-button-response",
-    stimulus:
-      "<p class='instructions'><center>" +
-      "<img src = 'media/UHH.png'>" +
-      "<img src = 'media/UCL.jpg'>" +
-      "<img src = 'media/UR.png'>" +
-      "<br><b>SCC-Project (Social Contact during the Corona-crisis)</b>" + 
-      "</center></p>" +
-      "<p class='instructions'>Thank you for taking part in this study: <b>You make a valuable contribution to scientific research on social " +
-      "consequences of the corona crisis. </b></p>" +
-      "<p class='instructions'>During this study, you will be asked to complete a simple video game task. By clicking below to start the study, you recognize that you know:</p>" +
-        "<ul class='instructions'>" +
-          "<li>You can stop your participation at any time </li>" +
-          "<li>You can contact our team for any questions or dissatisfaction related to your " +
-          "participation: EMAIL ADRESS.</li>" +
-          "<li>The data collected will be strictly confidential and will only be accessible to researchers.</li>" +
-          "<li>We do not record any data that allows to personally identify you. We do not record your IP address.</li>" +
-        "</ul>" ,
-    choices: ['I confirm that I give my free and informed consent to participate']
-  };
 
   var welcome_fr = {
     type: "html-button-response",
@@ -570,16 +525,6 @@ var save_extra = {
   };
 
 // Switching to fullscreen --------------------------------------------------------------
-  var fullscreen_trial_en = {
-    type: 'fullscreen',
-    message:  '<p><b>Before you start...</b></p>' + 
-          '<li>Minimize any potential distractor (close other computer programs, silence your cell phone, etc.). </li>'+
-          '<li>Disable your ad-blocking software, because ad-blocking softwares interfere with data collection. <br><br></li>'+
-          '<p>To take part in this study, your browser needs to be set to fullscreen.<br></p>',
-    button_label: 'Switch to fullscreen',
-    fullscreen_mode: false //true
-  }
-
   var fullscreen_trial_fr = {
     type: 'fullscreen',
     message:  '<p><b>Avant de commencer...</b></p>' + 
@@ -591,21 +536,6 @@ var save_extra = {
   }
 
 // VAAST --------------------------------------------------------------------------------
-var vaast_instructions_1_en = {
-  type: "html-keyboard-response",
-  stimulus:
-    "<h1 class ='custom-title'> Video Game task</h1>" +
-    "<p class='instructions'>In this task, just like in a video game, you will find yourself within the corridor presented below.</p> " +
-   "<p class='instructions'> Drawings of items (representing a person or a plant) will appear in the corridor. </p>" +
-    "<br>" +
-    "<img src = 'media/vaast-background.png'>" +
-    "<br>" +
-    "<br>" +
-    "<p class = 'continue-instructions'>Press <strong>space</strong> to" +
-    " continue.</p>",
-  choices: [32]
-};
-
 var vaast_instructions_1_fr = {
   type: "html-keyboard-response",
   stimulus:
@@ -621,21 +551,7 @@ var vaast_instructions_1_fr = {
   choices: [32]
 };
 
- var vaast_instructions_2_en = {
-    type: "html-keyboard-response",
-    stimulus:
-      "<h1 class ='custom-title'>Video Game task </h1>" +
-      "<p class='instructions'> Your task is to move toward or away from the items as a function of their category " +
-      "(more specific instructions following). To do so, use the upward and downward arrow keys on your keyboard: </p>" +
-      "<p class='instructions'><center>" +
-        "<img src = 'media/keyboard-vaastt_en.png'>" +
-      "</center></p>" +
-          "<br>" +
-      "<p class = 'continue-instructions'>Press <strong>space</strong> to continue.</p>",
-    choices: [32]
-  };
-
- var vaast_instructions_2_fr = {
+var vaast_instructions_2_fr = {
     type: "html-keyboard-response",
     stimulus:
       "<h1 class ='custom-title'> Tâche du Jeu Vidéo </h1>" +
@@ -649,26 +565,6 @@ var vaast_instructions_1_fr = {
     " continuer.</p>",
     choices: [32]
   };
-
-
-var vaast_instructions_4_en = {
-  type: "html-keyboard-response",
-  stimulus:
-    "<h1 class ='custom-title'> Video Game task - Section 1/4</h1>" +
-    "<p class='instructions'>In this section, you have to: " +
-    "<ul class='instructions'>" +
-    "<li><strong>Move toward " + group_to_approach_1_en + " by pressing the upward arrow key </strong></li>" +
-    "<strong>  </strong>" +
-    "<li><strong>Move away from " + group_to_avoid_1_en + " by pressing the downward arrow key </strong></li>" +
-    "<strong> </strong>" +
-    "</ul>" +
-    "<strong> EXTREMELY IMPORTANT: respond as fast and as correctly as possible! <br><br></strong>" +
-    "<p class ='instructions'>If you make an error, a red x appears (correct you answer with the other key). Use the index finger of your preferred hand to respond. " +
-    "<br>" +
-    "<p class = 'continue-instructions'>Press <strong>space</strong> to" +
-    " continue.</p>",
-  choices: [32]
-};
 
 var vaast_instructions_4_fr = {
   type: "html-keyboard-response",
@@ -686,25 +582,6 @@ var vaast_instructions_4_fr = {
     "<br>" +
     "<p class = 'continue-instructions'>Appuyez sur <strong>espace</strong> pour" +
     " continuer.</p>",
-  choices: [32]
-};
-
-
-var vaast_instructions_5_en = {
-  type: "html-keyboard-response",
-  stimulus:
-    "<h1 class ='custom-title'> Video Game task - Section 2/4</h1>" +
-    "<p class='instructions'>Warning! Instructions are changing. Now, you have to: " +
-    "<ul class='instructions'>" +
-    "<li><strong>Move toward " + group_to_approach_2_en + " by pressing the upward arrow key </strong></li>" +
-    "<strong>  </strong>" +
-    "<li><strong>Move away from " + group_to_avoid_2_en + " by pressing the downward arrow key </strong></li>" +
-    "<strong> </strong>" +
-    "</ul>" +
-    "<strong> EXTREMELY IMPORTANT: respond as fast and as correctly as possible! <br><br></strong>" +
-    "<br>" +
-    "<p class = 'continue-instructions'>Press <strong>space</strong> to" +
-    " continue.</p>",
   choices: [32]
 };
 
@@ -726,24 +603,6 @@ var vaast_instructions_5_fr = {
   choices: [32]
 };
 
-var vaast_instructions_6_en = {
-  type: "html-keyboard-response",
-  stimulus:
-    "<h1 class ='custom-title'> Video Game task - Section 3/4</h1>" +
-    "<p class='instructions'>Warning! Instructions are changing. Now, you have to: " +
-    "<ul class='instructions'>" +
-    "<li><strong>Move toward " + group_to_approach_3_en + " by pressing the upward arrow key </strong></li>" +
-    "<strong>  </strong>" +
-    "<li><strong>Move away from " + group_to_avoid_3_en + " by pressing the downward arrow key </strong></li>" +
-    "<strong> </strong>" +
-    "</ul>" +
-    "<strong> EXTREMELY IMPORTANT: respond as fast and as correctly as possible! <br><br></strong>" +
-    "<br>" +
-    "<p class = 'continue-instructions'>Press <strong>space</strong> to" +
-    " continue.</p>",
-  choices: [32]
-};
-
 var vaast_instructions_6_fr = {
   type: "html-keyboard-response",
   stimulus:
@@ -761,27 +620,6 @@ var vaast_instructions_6_fr = {
     " continuer.</p>",
   choices: [32]
 };
-
-
-
-var vaast_instructions_7_en = {
-  type: "html-keyboard-response",
-  stimulus:
-    "<h1 class ='custom-title'> Video Game task - Section 4/4</h1>" +
-    "<p class='instructions'>Warning! Instructions are changing. Now, you have to: " +
-    "<ul class='instructions'>" +
-    "<li><strong>Move toward " + group_to_approach_4_en + " by pressing the upward arrow key </strong></li>" +
-    "<strong>  </strong>" +
-    "<li><strong>Move away from " + group_to_avoid_4_en + " by pressing the downward arrow key </strong></li>" +
-    "<strong> </strong>" +
-    "</ul>" +
-    "<strong> EXTREMELY IMPORTANT: respond as fast and as correctly as possible! <br><br></strong>" +
-    "<br>" +
-    "<p class = 'continue-instructions'>Press <strong>space</strong> to" +
-    " continue.</p>",
-  choices: [32]
-};
-
 
 var vaast_instructions_7_fr = {
   type: "html-keyboard-response",
@@ -1065,16 +903,7 @@ var fullscreen_trial_exit = {
 }
 
   // demographics + questions -------------------------------------------------------------
-
-  var extra_information_en = {
-    type: 'html-keyboard-response',
-    stimulus:
-      "<p class='instructions'>The study is almost finished. Now, you have to answer a few questions.</p>" +
-      "<p class='continue-instructions'>Press <strong>space</strong> to continue.</p>",
-    choices: [32]
-  };
-
-  var extra_information_fr = {
+var extra_information_fr = {
     type: 'html-keyboard-response',
     stimulus:
       "<p class='instructions'>Cette étude est presque terminée. Vous allez maintenant devoir répondre à quelques questions.</p>" +
@@ -1082,29 +911,7 @@ var fullscreen_trial_exit = {
     choices: [32]
   };
 
-
-  var extra_information_2_en = {
-    timeline: [{
-      type: 'survey-text',
-      questions: [{prompt: "What is your age?"}],
-      button_label: "OK",
-    }],
-    loop_function: function(data) {
-      var extra_information_2 = data.values()[0].responses;
-      var extra_information_2 = JSON.parse(extra_information_2).Q0;
-      if (extra_information_2 == "") {
-        alert("Please enter you age!");
-        return true;
-      }
-    },
-    on_finish: function(data) {
-      jsPsych.data.addProperties({
-        extra_information_2: JSON.parse(data.responses)["Q0"],
-      });
-    }
-  }
- 
- var extra_information_2_fr = {
+var extra_information_2_fr = {
     timeline: [{
       type: 'survey-text',
       questions: [{prompt: "Quel est votre âge ?"}],
@@ -1126,28 +933,13 @@ var fullscreen_trial_exit = {
   }
 
 
-  var extra_information_3_en = {
-    type: 'survey-multi-choice',
-    questions: [{prompt: "What is your gender?", options: ["&nbspMale", "&nbspFemale", "&nbspOther"], required: true, horizontal: true}],
-    button_label: "OK"
-  }
-
-  var extra_information_3_fr = {
+var extra_information_3_fr = {
     type: 'survey-multi-choice',
     questions: [{prompt: "Quel est votre genre ?", options: ["&nbspHomme", "&nbspFemme", "&nbspAutre"], required: true, horizontal: true}],
     button_label: "OK"
   }
 
-
-  var extra_information_4_en = {
-    type: 'survey-multi-choice',
-    questions: [{prompt: "How well do you speak english?",
-                 options: ["&nbspFluently", "&nbspVery good", "&nbspGood", "&nbspAverage", "&nbspBad", "&nbspVery bad"],
-                 required: true, horizontal: false}],
-    button_label: "OK"
-  }
-
-  var extra_information_4_fr = {
+var extra_information_4_fr = {
     type: 'survey-multi-choice',
     questions: [{prompt: "Dans quelle mesure parlez-vous bien français ?",
                  options: ["&nbspLangue maternelle", "&nbspTrès bien", "&nbspBien", "&nbspMoyennement", "&nbspMal", "&nbspTrès mal"],
@@ -1155,15 +947,7 @@ var fullscreen_trial_exit = {
     button_label: "OK"
   }
 
-  var extra_information_5_en = {
-    type: 'survey-multi-choice',
-    questions: [{prompt: "What is your socioeconomic status?",
-                 options: ["&nbspVery low", "&nbspLow", "&nbspMedium", "&nbspHigh", "&nbspVery high"],
-                 required: true, horizontal: false}],
-    button_label: "OK"
-  }
-
-  var extra_information_5_fr = {
+var extra_information_5_fr = {
     type: 'survey-multi-choice',
     questions: [{prompt: "Quel est votre statut socio-économique ?",
                  options: ["&nbspTrès bas", "&nbspBas", "&nbspMoyen", "&nbspHaut", "&nbspTrès haut"],
@@ -1171,15 +955,7 @@ var fullscreen_trial_exit = {
     button_label: "OK"
   }
 
-  var extra_information_6_en = {
-    type: 'survey-multi-choice',
-    questions: [{prompt: "What is your highest level of education?",
-                 options: ["&nbspDid not complete high school", "&nbspHigh school/GED", "&nbspSome college", "&nbspBachelor's degree", "&nbspMaster's degree", "&nbspAdvanced graduate work or Ph.D."],
-                 required: true, horizontal: false}],
-    button_label: "OK"
-  }
-
-  var extra_information_6_fr = {
+var extra_information_6_fr = {
     type: 'survey-multi-choice',
     questions: [{prompt: "Quel est votre niveau d'études ?",
                  options: ["&nbspEn dessous du baccalauréat", "&nbspBaccalauréat (obtenu)", "&nbspEn dessous de la licence universitaire", "&nbspLicence universitaire (obtenue)", "&nbspMaster (obtenu)", "&nbspDoctorat (obtenu)"],
@@ -1187,13 +963,7 @@ var fullscreen_trial_exit = {
     button_label: "OK"
   }
 
-  var extra_information_7_en = {
-    type: 'survey-text',
-    questions: [{prompt: "Do you have any remarks about this study? [Optional]"}],
-    button_label: "OK"
-  }
-
-  var extra_information_7_fr = {
+var extra_information_7_fr = {
     type: 'survey-text',
     questions: [{prompt: "Avez-vous des remarques concernant cette étude ? [Optionnel]"}],
     button_label: "OK"
@@ -1202,22 +972,7 @@ var fullscreen_trial_exit = {
 
   // end insctruction ---------------------------------------------------------------------
 
-  var ending_en = {
-    type: "html-keyboard-response",
-    stimulus:
-      "<p class='instructions'>You are now finished with this study.<p>" +
-      "<p class='instructions'>In this study, we were interested in the measure of " +
-      "approach and avoidance tendencies. Specifically, we aim at testing whether the coronavirus lock down " +
-      "influences people's tendencies to approach other persons (comparatively to plants). Indeed, one could expect that habituation to avoid others </p>" +
-      "<p class='instructions'>become automatized in our tendencies. On the contrary, people might become highly motivated to " +
-      "approach others because they feel lonely. </p>" +
-      "<p class='instructions'>For more information to this topic, please email " +
-      "marine.rougier@uclouvain.be</p>" +
-      "<p class = 'continue-instructions'>Press <strong>space</strong> to VALIDATE your participation.</p>",
-    choices: [32]
-  };
-
-  var ending_fr = {
+var ending_fr = {
     type: "html-keyboard-response",
     stimulus:
       "<p class='instructions'>Vous avez terminé cette étude.<p>" +
@@ -1232,7 +987,7 @@ var fullscreen_trial_exit = {
     choices: [32]
   };
 
-  var feedback_en_block12 = {
+  var feedback_fr_block12 = {
     type: "html-keyboard-response",
     on_load: function() {
       document.getElementById('FeedbackMeanReactionTime').innerHTML = (FeedbackMeanReactionTime + FeedbackMeanReactionTime_train)/2;
@@ -1240,16 +995,16 @@ var fullscreen_trial_exit = {
       document.getElementById('FeedbackNumberOfTotalRespones').innerHTML = (FeedbackNumberOfCorrectResponses + FeedbackNumberOfCorrectResponses_train) + (FeedbackNumberOfWrongResponses + FeedbackNumberOfWrongResponses_train);
     },
     stimulus:
-      "<p class='instructions'><center>Good job!<br><br>" + 
-      "Here is your average Reaction Time: <span id='FeedbackMeanReactionTime'></span> milli seconds<br>" +
-      "You reacted <span id='FeedbackNumberOfCorrectRespones'></span> of " +
-      "<span id='FeedbackNumberOfTotalRespones'></span> times correctly." +
+      "<p class='instructions'><center>Bien joué !<br><br>" + 
+      "Voici votre temps moyen de réaction : <span id='FeedbackMeanReactionTime'></span> millisecondes<br>" +
+      "Vous avez réagi <span id='FeedbackNumberOfCorrectRespones'></span> sur " +
+      "<span id='FeedbackNumberOfTotalRespones'></span> fois correctement." +
       "</p></center>" +
-      "<p class = 'continue-instructions'>Press <strong>space</strong> to continue</p>",
+      "<p class = 'continue-instructions'>Appuyez sur <strong>espace</strong> pour continuer</p>",
     choices: [32]
   };
 
-  var feedback_en_block34 = {
+  var feedback_fr_block34 = {
     type: "html-keyboard-response",
     on_load: function() {
       document.getElementById('FeedbackMeanReactionTime').innerHTML = FeedbackMeanReactionTime;
@@ -1257,12 +1012,12 @@ var fullscreen_trial_exit = {
       document.getElementById('FeedbackNumberOfTotalRespones').innerHTML = FeedbackNumberOfCorrectResponses + FeedbackNumberOfWrongResponses;
     },
     stimulus:
-      "<p class='instructions'><center>Good job!<br><br>" + 
-      "Here is your average Reaction Time: <span id='FeedbackMeanReactionTime'></span> milli seconds<br>" +
-      "You reacted <span id='FeedbackNumberOfCorrectRespones'></span> of " +
-      "<span id='FeedbackNumberOfTotalRespones'></span> times correctly." +
+      "<p class='instructions'><center>Bien joué !<br><br>" + 
+      "Voici votre temps moyen de réaction : <span id='FeedbackMeanReactionTime'></span> millisecondes<br>" +
+      "Vous avez réagi <span id='FeedbackNumberOfCorrectRespones'></span> sur " +
+      "<span id='FeedbackNumberOfTotalRespones'></span> fois correctement." +
       "</p></center>" +
-      "<p class = 'continue-instructions'>Press <strong>space</strong> to continue</p>",
+      "<p class = 'continue-instructions'>Appuyez sur <strong>espace</strong> pour continuer</p>",
     choices: [32]
   };
 
@@ -1281,36 +1036,36 @@ timeline.push(save_id);
 
 timeline.push(
 
-  welcome_en,
-  fullscreen_trial_en,
+  welcome_fr,
+  fullscreen_trial_fr,
   hiding_cursor,
-  vaast_instructions_1_en,
-  vaast_instructions_2_en,
-  vaast_instructions_4_en,
+  vaast_instructions_1_fr,
+  vaast_instructions_2_fr,
+  vaast_instructions_4_fr,
   vaast_training_block_1,
   vaast_test_block_1,
-  feedback_en_block12,
-  vaast_instructions_5_en,
+  feedback_fr_block12,
+  vaast_instructions_5_fr,
   vaast_training_block_2,
   vaast_test_block_2,
-  feedback_en_block12,
-  vaast_instructions_6_en,
+  feedback_fr_block12,
+  vaast_instructions_6_fr,
   vaast_test_block_3,
-  feedback_en_block34,
-  vaast_instructions_7_en,
+  feedback_fr_block34,
+  vaast_instructions_7_fr,
   vaast_test_block_4,
-  feedback_en_block34,
+  feedback_fr_block34,
   showing_cursor,
   fullscreen_trial_exit,
-  extra_information_en,
-  extra_information_2_en,
-  extra_information_3_en,
-  extra_information_4_en,
-  extra_information_5_en,
-  extra_information_6_en,
-  extra_information_7_en,
+  extra_information_fr,
+  extra_information_2_fr,
+  extra_information_3_fr,
+  extra_information_4_fr,
+  extra_information_5_fr,
+  extra_information_6_fr,
+  extra_information_7_fr,
   save_extra,
-  ending_en
+  ending_fr
 );
 
 // Launch experiment --------------------------------------------------------------------
@@ -1323,7 +1078,6 @@ var vaast_instructions_images = ["media/UHH.png",
                                  "media/UCL.jpg",
                                  "media/UR.png",
                                  "media/vaast-background.png", 
-                                 "media/keyboard-vaastt_en.png", 
                                  "media/keyboard-vaastt_fr.png"];
 var vaast_bg_filename         = background;
 
